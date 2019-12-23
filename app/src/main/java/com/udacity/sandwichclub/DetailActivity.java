@@ -76,15 +76,17 @@ public class DetailActivity extends AppCompatActivity {
         TextView textViewAlsoKnown = findViewById(R.id.also_known_tv);
         String otherNamesValues = "";
         for (String value : sandwich.getAlsoKnownAs()) {
-            otherNamesValues += ", " + value;
+            otherNamesValues += value + ", ";
         }
+        otherNamesValues = otherNamesValues.substring(0, (otherNamesValues.length()-2));
         textViewAlsoKnown.setText(otherNamesValues);
 
         TextView textViewIngredients = findViewById(R.id.ingredients_tv);
         String ingredientsValues = "";
         for (String value : sandwich.getIngredients()) {
-            ingredientsValues += ", " + value;
+            ingredientsValues += value + ", ";
         }
+        ingredientsValues = ingredientsValues.substring(0, (ingredientsValues.length()-2));
         textViewIngredients.setText(ingredientsValues);
     }
 }

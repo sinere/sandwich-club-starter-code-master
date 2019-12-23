@@ -24,7 +24,8 @@ public class JsonUtils {
             sandwich.setDescription(sandwichJson.optString("description"));
             sandwich.setImage(sandwichJson.optString("image"));
 
-            JSONArray jsonArrayAKS = sandwichJson.optJSONArray("alsoKnownAs");
+            JSONObject nameJSONObject = sandwichJson.getJSONObject("name");
+            JSONArray jsonArrayAKS = nameJSONObject.optJSONArray("alsoKnownAs");
             List<String> listAlsoKnownAs = new ArrayList<String>();
             if(jsonArrayAKS != null) {
                 for (int i = 0; i < jsonArrayAKS.length(); i++) {
