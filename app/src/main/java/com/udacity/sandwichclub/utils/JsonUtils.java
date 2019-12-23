@@ -19,12 +19,11 @@ public class JsonUtils {
 
         try {
             JSONObject sandwichJson = new JSONObject(json);
-            sandwich.setMainName(sandwichJson.optString("mainName"));
+            JSONObject nameJSONObject = sandwichJson.getJSONObject("name");
+            sandwich.setMainName(nameJSONObject.optString("mainName"));
             sandwich.setPlaceOfOrigin(sandwichJson.optString("placeOfOrigin"));
             sandwich.setDescription(sandwichJson.optString("description"));
             sandwich.setImage(sandwichJson.optString("image"));
-
-            JSONObject nameJSONObject = sandwichJson.getJSONObject("name");
             JSONArray jsonArrayAKS = nameJSONObject.optJSONArray("alsoKnownAs");
             List<String> listAlsoKnownAs = new ArrayList<String>();
             if(jsonArrayAKS != null) {
