@@ -30,7 +30,6 @@ public class JsonUtils {
             if(jsonArrayAKS != null) {
                 for (int i = 0; i < jsonArrayAKS.length(); i++) {
                     listAlsoKnownAs.add(jsonArrayAKS.getString(i));
-                    Log.e("LOG_STRING", "also Known As = " + jsonArrayAKS.toString());
                 }
 
             }
