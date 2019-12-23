@@ -78,7 +78,9 @@ public class DetailActivity extends AppCompatActivity {
         for (String value : sandwich.getAlsoKnownAs()) {
             otherNamesValues += value + ", ";
         }
-        otherNamesValues = otherNamesValues.substring(0, (otherNamesValues.length()-2));
+        if (otherNamesValues.length() > 1) {
+            otherNamesValues = otherNamesValues.substring(0, (otherNamesValues.length() - 2));
+        }
         textViewAlsoKnown.setText(otherNamesValues);
 
         TextView textViewIngredients = findViewById(R.id.ingredients_tv);
@@ -86,7 +88,9 @@ public class DetailActivity extends AppCompatActivity {
         for (String value : sandwich.getIngredients()) {
             ingredientsValues += value + ", ";
         }
-        ingredientsValues = ingredientsValues.substring(0, (ingredientsValues.length()-2));
+        if (ingredientsValues.length() > 1) {
+            ingredientsValues = ingredientsValues.substring(0, (ingredientsValues.length() - 2));
+        }
         textViewIngredients.setText(ingredientsValues);
     }
 }
