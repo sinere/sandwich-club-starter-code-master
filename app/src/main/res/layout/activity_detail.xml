@@ -7,6 +7,9 @@
     tools:context="com.udacity.sandwichclub.DetailActivity"
     android:baselineAligned="false">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
     <ImageView
         android:id="@+id/image_iv"
         android:layout_width="match_parent"
@@ -14,10 +17,6 @@
         android:adjustViewBounds="true"
         android:contentDescription="@string/sandwich_picture_content_description"
         android:scaleType="centerCrop" />
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
 
     <GridLayout
         android:layout_width="wrap_content"
