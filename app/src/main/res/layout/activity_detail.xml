@@ -15,6 +15,10 @@
         android:contentDescription="@string/sandwich_picture_content_description"
         android:scaleType="centerCrop" />
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
     <GridLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -69,4 +73,5 @@
             android:layout_marginRight="110dp"/>
 
     </GridLayout>
+    </ScrollView>
 </LinearLayout>
