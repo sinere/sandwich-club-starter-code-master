@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,9 +11,6 @@
     tools:context="com.udacity.sandwichclub.DetailActivity"
     android:baselineAligned="false">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
     <ImageView
         android:id="@+id/image_iv"
         android:layout_width="match_parent"
@@ -72,5 +73,6 @@
             android:layout_marginRight="110dp"/>
 
     </GridLayout>
-    </ScrollView>
+
 </LinearLayout>
+</ScrollView>
